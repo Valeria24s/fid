@@ -1,8 +1,7 @@
-style.css 
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #faf2e4; /* Light cream background */
+    background-color: #faf2e4; /* Light beige background */
     color: #333; /* Dark gray text */
     margin: 0;
     padding: 0;
@@ -14,10 +13,7 @@ header {
     background-color: #d1633c; /* Burnt orange header */
     color: white;
     padding: 20px;
-}
-
-header img {
-    max-width: 200px;
+    text-align: center;
 }
 
 /* Navigation */
@@ -36,6 +32,21 @@ nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+}
+
+/* Center the Logo */
+header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    max-width: 250px; /* Adjust the size if needed */
+    display: block;
+    margin: 0 auto;
 }
 
 /* Main Content */
@@ -45,7 +56,7 @@ main {
 
 /* Footer */
 footer {
-    background-color: #d1633c; /* Same burnt orange as header */
+    background-color: #d1633c;
     color: white;
     padding: 10px;
     margin-top: 20px;
