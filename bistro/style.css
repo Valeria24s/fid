@@ -2,15 +2,16 @@ style.css
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #faf2e4;
-    text-align: center;
+    background-color: #faf2e4; /* Light cream background */
+    color: #333; /* Dark gray text */
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 /* Header */
 header {
-    background-color: #d1633c;
+    background-color: #d1633c; /* Burnt orange header */
     color: white;
     padding: 20px;
 }
@@ -23,6 +24,7 @@ header img {
 nav ul {
     list-style-type: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -43,7 +45,7 @@ main {
 
 /* Footer */
 footer {
-    background-color: #d1633c;
+    background-color: #d1633c; /* Same burnt orange as header */
     color: white;
     padding: 10px;
     margin-top: 20px;
