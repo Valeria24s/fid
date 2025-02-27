@@ -1,0 +1,21 @@
+style.css
+body {
+    background-color: #E6E6FA; /* Light lilac */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #5D3FD3; /* Dark lilac */
+}
+
+a {
+    color: #8A2BE2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
