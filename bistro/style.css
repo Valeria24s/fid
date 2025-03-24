@@ -84,25 +84,24 @@ footer {
 
 /* GIF Button Styles */
 .gif-button {
-    width: 300px; /* Increased size to make the GIF more visually prominent */
-    height: auto; /* Maintain the aspect ratio of the GIF */
-    cursor: pointer; /* Make it clickable */
-    border: 2px solid #333; /* Add a border to make it look like a button */
-    padding: 10px; /* Add some space around the GIF */
-    border-radius: 5px; /* Optional: round the corners */
-    transition: transform 0.3s ease; /* Smooth hover effect */
-    display: inline-block; /* Make it inline-block so it can act as a button */
+    width: 250px; /* Adjusted size to be noticeable but not too big */
+    height: auto; /* Keep aspect ratio */
+    cursor: pointer; /* Clickable */
+    border: 2px solid #333; /* Button effect */
+    padding: 10px; /* Space around */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover */
+    display: inline-block;
 }
 
 .gif-button:hover {
-    transform: scale(1.1); /* Slightly enlarge the GIF on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
-/* Logos Style (Ensure logos are small) */
+/* Logos - Fixed Size */
 footer img {
     width: 40px; /* Set size for logos */
-    height: 40px; /* Ensure logos are square */
+    height: 40px; /* Ensure logos are not huge */
     margin-left: .5em;
     margin-right: .5em;
 }
-
