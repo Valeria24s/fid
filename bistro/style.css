@@ -1,0 +1,79 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf2e4; /* Light beige background */
+    color: #333; /* Dark gray text */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #d1633c; /* Burnt orange header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* GIF Button Styles */
+.gif-button {
+    width: 250px;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid #333;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.gif-button:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #d1633c;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Style for h2 (default to blue) */
+h2 {
+    color: blue;
+}
+
+/* Logos - Fixed Size */
+footer img {
+    width: 40px;
+    height: 40px;
+    margin-left: .5em;
+    margin-right: .5em;
+}
