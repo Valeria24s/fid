@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E6E6FA; /* Light lilac */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #D8BFD8; /* Light purple */
+    padding: 20px;
+    color: white;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+/* Main Content */
+section {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 1.1em;
+    padding: 5px 0;
+}
+
+/* Links */
+a {
+    color: #6A5ACD; /* Soft purple */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Work Samples (Images) */
+.work-samples {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.work-samples .image-container {
+    text-align: center;
+    width: 200px; /* Control thumbnail size */
+}
+
+.work-samples img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* On hover, images will zoom in */
+.work-samples img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #D8BFD8;
+    padding: 15px;
+    color: white;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+/* Individual Image Page */
+h1 {
+    font-size: 3em;
+    color: #6A5ACD; /* Title color */
+    margin-top: 20px;
+}
+
+/* Styling for the full-size image page */
+.image-container {
+    margin: 50px auto;
+    max-width: 90%;
+    display: block;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Back Button */
+.back-button {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #6A5ACD;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #483D8B; /* Darker purple on hover */
+}
