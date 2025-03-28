@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Place Your Order</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Go Back to Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Order Your Favorite Pizza!</h2>
+        <!-- Example Order Form -->
+        <form action="thank_you.html" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required><br><br>
+
+            <label for="pizza">Choose your pizza:</label>
+            <select name="pizza" id="pizza">
+                <option value="cheese">Cheese</option>
+                <option value="pepperoni">Pepperoni</option>
+                <option value="veggie">Veggie</option>
+            </select><br><br>
+
+            <input type="submit" value="Submit Order">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Black Goose Bistro. All rights reserved.</p>
+    </footer>
+</body>
+</html>
