@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Order</title>
+    <style>
+        body {
+            background-color: #faf2e4;
+            font-family: sans-serif;
+            margin: 0 10%;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: serif;
+            font-weight: normal;
+            text-transform: uppercase;
+            border-bottom: 1px solid #57b1dc;
+            margin-top: 30px;
+        }
+
+        h2 {
+            color: #d1633c;
+            font-size: 1em;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        p.disclaimer {
+            border-top: 1px solid #d1633c;
+            padding-top: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>THANK YOU</h1>
+
+    <p>Thank you for ordering from Black Goose Bistro. We have received the following information about your order:</p>
+
+    <h2>Your Information</h2>
+    <ul id="orderInfo">
+        <!-- Order details will be inserted here by JavaScript -->
+    </ul>
+
+    <h2>Your Pizza</h2>
+    <ul id="pizzaDetails">
+        <!-- Pizza details will be inserted here by JavaScript -->
+    </ul>
+
+    <p class="disclaimer"><small>This site is for educational purposes only. No pizzas will show up at your door.</small></p>
+
+    <script>
+        // Retrieve order data from localStorage
+        const orderData = JSON.parse(localStorage.getItem("orderData"));
+
+        // Display user info
+        document.getElementById("orderInfo").innerHTML = `
+            <li><strong>Name:</strong> ${orderData.name}</li>
+            <li><strong>Address:</strong> ${orderData.address}</li>
+            <li><strong>Phone Number:</strong> ${orderData.phone}</li>
+            <li><strong>Email Address:</strong> ${orderData.email}</li>
+        `;
+
+        // Display pizza details
+        document.getElementById("pizzaDetails").innerHTML = `
+            <li><strong>Crust:</strong> ${orderData.crust}</li>
+            <li><strong>Toppings:</strong> ${orderData.toppings}</li>
+            <li><strong>Quantity:</strong> ${orderData.quantity}</li>
+        `;
+    </script>
+</body>
+</html>
+
