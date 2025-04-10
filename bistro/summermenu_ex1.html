@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Black Goose Bistro Summer Menu - Menu 1</title>
+  <link href="http://fonts.googleapis.com/css?family=Marko+One" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Styling from earlier code */
+    body {
+      font-family: Georgia, serif;
+      font-size: 100%;
+      line-height: 1.75em;
+      background-color: #faf2e4;
+      color: #333;
+    }
+
+    h1 {
+      font: bold 1.5em "Marko One", Georgia, serif;
+      color: #d1633c;
+      text-shadow: .05em .05em .1em lightslategray;
+    }
+
+    h2 {
+      font-size: 1em;
+      text-transform: uppercase;
+      letter-spacing: .5em;
+      color: #d1633c;
+      text-align: center;
+    }
+
+    .price {
+      font-family: Georgia, serif;
+      font-style: italic;
+      color: #d1633c;
+    }
+
+    .label {
+      font-weight: bold;
+      font-variant: small-caps;
+      font-style: normal;
+    }
+
+    p.warning {
+      font-size: small;
+      color: red;
+    }
+
+    #appetizers, #entrees {
+      margin: 20px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="info">
+    <h1>Black Goose Bistro &bull; Summer Menu 1</h1>
+    <p>Baker's Corner, Seekonk, Massachusetts<br>
+      <span class="label">Hours: Monday through Thursday:</span> 11 to 9,
+      <span class="label">Friday and Saturday:</span> 11 to midnight</p>
+  </div>
+
+  <div id="appetizers">
+    <h2>Appetizers</h2>
+    <p>Small bites to start off your meal.</p>
+    <dl>
+      <dt>Bruschetta</dt>
+      <dd>Fresh tomatoes, basil, and garlic served on toasted baguette slices. <span class="price">$4.95</span></dd>
+
+      <dt class="newitem">Stuffed Mushrooms</dt>
+      <dd>Button mushrooms stuffed with a savory blend of cheese, herbs, and breadcrumbs. <span class="price">$5.95</span></dd>
+    </dl>
+  </div>
+
+  <div id="entrees">
+    <h2>Main Courses</h2>
+    <p>Enjoy our hearty, flavorful main dishes.</p>
+    <dl>
+      <dt class="newitem">Grilled Chicken with Mango Salsa</dt>
+      <dd>Succulent chicken breasts grilled and topped with fresh mango salsa. <span class="price">$14.95</span></dd>
+
+      <dt>Vegetable Stir-Fry</dt>
+      <dd>A medley of fresh seasonal vegetables stir-fried with soy sauce and served with rice. <span class="price">$12.95</span></dd>
+
+      <dt>Grilled Salmon</dt>
+      <dd>Grilled salmon fillet served with roasted vegetables. <span class="price">$16.95</span></dd>
+    </dl>
+  </div>
+
+  <p class="warning"><sup>*</sup> We are required to warn you that undercooked food is a health risk.</p>
+</body>
+
+</html>
