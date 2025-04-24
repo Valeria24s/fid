@@ -1,40 +1,59 @@
-contact.html 
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact Us</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <h1>Contact Us</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="tapenade.html">Recipes</a></li>
-                    <li><a href="bgnews.html">News</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-    
-        <main>
-            <h2>Our Location</h2>
-            <p>📍 1234 Culinary Avenue, Food City, FC 56789</p>
-            <p>📞 <a href="tel:1234567890">(123) 456-7890</a></p>
-            <p>✉️ <a href="mailto:info@blackgoosebistro.com">info@blackgoosebistro.com</a></p>
-    
-            <h2>Business Hours</h2>
-            <p>Monday - Thursday: 11 AM - 9 PM</p>
-            <p>Friday & Saturday: 11 AM - Midnight</p>
-            <p>Sunday: Closed</p>
-        </main>
-    
-        <footer>
-            <p>&copy; 2025 Black Goose Bistro. All rights reserved.</p>
-        </footer>
-    </body>
-    </html>
-    
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Black Goose Bistro</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Black Goose Bistro</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tapenade.html">Recipes</a></li>
+          <li><a href="bgnews.html">News</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="cookingwithdaniel.html">Cooking with Daniel</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="contact-info">
+      <h2>Contact Us</h2>
+      <p><strong>Address:</strong> 📍 1234 Culinary Avenue, Food City, FC 56789</p>
+      <p><strong>Phone:</strong> 📞 <a href="tel:1234567890">(123) 456-7890</a></p>
+      <p><strong>Email:</strong> ✉️ <a href="mailto:info@blackgoosebistro.com">info@blackgoosebistro.com</a></p>
+    </section>
+
+    <section class="business-hours">
+      <h2>Business Hours</h2>
+      <ul>
+        <li>Monday - Thursday: 11 AM - 9 PM</li>
+        <li>Friday & Saturday: 11 AM - Midnight</li>
+        <li>Sunday: Closed</li>
+      </ul>
+    </section>
+
+    <section class="map">
+      <h2>Find Us Here</h2>
+      <img src="images/map.png" alt="Map showing Black Goose Bistro location" class="responsive-img" />
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Black Goose Bistro. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
