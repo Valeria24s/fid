@@ -1,0 +1,124 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Marko One', sans-serif;
+  color: #333;
+  background-color: #f8f8f8;
+  line-height: 1.6;
+}
+
+/* Header styles */
+header {
+  background-color: #e5d8c7;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-bottom: 2px solid #b48a78;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #b48a78;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: #b48a78;
+}
+
+/* Main content */
+main {
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+h2 {
+  color: #b48a78;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.responsive-img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+/* Order Now Button */
+.order-button {
+  width: 20%;
+  margin-top: 2rem;
+  transition: transform 0.3s;
+}
+
+.order-button:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background-color: #e5d8c7;
+  padding: 1rem;
+  text-align: center;
+  border-top: 2px solid #b48a78;
+  margin-top: 2rem;
+}
+
+footer p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  margin: 0 15px;
+}
+
+.social-icons img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .order-button {
+      width: 40%;
+  }
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+}
