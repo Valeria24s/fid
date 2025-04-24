@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Black Goose Bistro</title>
+  <style>
+    body {
+      background-color: #faf2e4;
+      margin: 0 10%;
+      font-family: sans-serif;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: serif;
+      font-weight: normal;
+      text-transform: uppercase;
+      margin-top: 30px;
+      color: #939;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 2em auto;
+      padding: 2em;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin: 1em 0 0.5em;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.7em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #d1633c;
+      color: white;
+      padding: 0.7em 1.5em;
+      margin-top: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #a8492e;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 2em;
+      text-decoration: none;
+      color: #d1633c;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3em;
+      padding-top: 1em;
+      border-top: 1px solid #ccc;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0.5em;
+    }
+
+    nav a {
+      text-decoration: none;
+      background-color: #d1633c;
+      color: white;
+      padding: 0.6em 1.2em;
+      border-radius: 0.5em;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #a8492e;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contact Black Goose Bistro</h1>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="summer menu.html">Menu</a></li>
+      <li><a href="bgnews.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <form action="mailto:info@blackgoosebistro.com" method="post" enctype="text/plain">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Your Message:</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <a href="index.html" class="back-link">← Go Back to Home</a>
+
+  <footer>
+    <p>&copy; 2016 Black Goose Bistro</p>
+  </footer>
+
+</body>
+</html>
+
+
+
+
