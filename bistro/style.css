@@ -1,124 +1,58 @@
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* styles.css */
 
 body {
-  font-family: 'Marko One', sans-serif;
+  font-family: 'Georgia', serif;
+  background-color: #fff8f0;
   color: #333;
-  background-color: #f8f8f8;
-  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-/* Header styles */
 header {
-  background-color: #e5d8c7;
-  padding: 1rem 2rem;
+  background-color: #fcd5ce;
+  padding: 1rem;
   text-align: center;
-  border-bottom: 2px solid #b48a78;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 header h1 {
-  font-size: 3rem;
-  color: #b48a78;
+  margin: 0;
+  font-size: 2.5rem;
+  color: #b3564c;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-nav li {
-  margin-right: 20px;
+nav {
+  background-color: #fff0e6;
+  padding: 0.5rem;
+  text-align: center;
 }
 
 nav a {
+  margin: 0 1rem;
   text-decoration: none;
-  color: #333;
+  color: #d17a61;
   font-weight: bold;
-  text-transform: uppercase;
 }
 
 nav a:hover {
-  color: #b48a78;
+  text-decoration: underline;
 }
 
-/* Main content */
 main {
-  padding: 2rem;
-  background-color: #fff;
-  text-align: center;
-}
-
-h2 {
-  color: #b48a78;
-  font-size: 2rem;
-  margin-top: 2rem;
-}
-
-p {
-  font-size: 1.1rem;
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-.responsive-img {
-  width: 100%;
-  max-width: 1000px;
-  height: auto;
-  margin-bottom: 2rem;
-}
-
-/* Order Now Button */
-.order-button {
-  width: 20%;
-  margin-top: 2rem;
-  transition: transform 0.3s;
-}
-
-.order-button:hover {
-  transform: scale(1.1);
-}
-
-/* Footer */
-footer {
-  background-color: #e5d8c7;
+  max-width: 800px;
+  margin: 2rem auto;
   padding: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+footer {
   text-align: center;
-  border-top: 2px solid #b48a78;
+  padding: 1rem;
+  background-color: #fcd5ce;
   margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #555;
 }
 
-footer p {
-  font-size: 1.1rem;
-  color: #666;
-}
-
-.social-icons {
-  margin-top: 1rem;
-}
-
-.social-icons a {
-  margin: 0 15px;
-}
-
-.social-icons img {
-  width: 50px;
-  height: 50px;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .order-button {
-      width: 40%;
-  }
-  nav ul {
-      flex-direction: column;
-      align-items: center;
-  }
-}
