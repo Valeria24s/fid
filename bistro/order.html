@@ -3,46 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Page</title>
+    <title>Order Pizza</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Place Your Order</h1>
+        <h1><img src="blackgoose.png" alt="Black Goose Bistro Logo"></h1>
     </header>
 
     <main>
-        <form id="orderForm" action="thank_you.html" method="GET" onsubmit="return handleSubmit(event)">
+        <h2>Place Your Order</h2>
+        <form id="orderForm">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
+            <input type="text" id="name" name="name" required>
 
             <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required><br>
+            <input type="text" id="address" name="address" required>
 
-            <label for="phone">Phone Number:</label>
-            <input type="text" id="phone" name="phone" required><br>
+            <label for="telephone">Telephone:</label>
+            <input type="text" id="telephone" name="telephone" required>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
+            <input type="email" id="email" name="email" required>
+
+            <label for="delivery">Delivery Instructions:</label>
+            <textarea id="delivery" name="delivery"></textarea>
 
             <label for="crust">Crust:</label>
             <select id="crust" name="crust">
                 <option value="white">White</option>
-                <option value="whole wheat">Whole Wheat</option>
-                <option value="gluten free">Gluten Free</option>
-            </select><br>
+                <option value="wholewheat">Whole Wheat</option>
+            </select>
 
-            <label for="toppings">Toppings:</label>
-            <select id="toppings" name="toppings">
+            <label for="topping">Topping:</label>
+            <select id="topping" name="topping">
                 <option value="redsauce">Red Sauce</option>
-                <option value="cheese">Cheese</option>
-                <option value="veggies">Veggies</option>
-            </select><br>
+                <option value="pesto">Pesto</option>
+            </select>
 
-            <label for="quantity">Number of Pizzas:</label>
-            <input type="number" id="quantity" name="quantity" min="1" required><br>
+            <label for="number">Quantity:</label>
+            <input type="number" id="number" name="number" min="1" value="1">
 
-            <button type="submit">Place Order</button>
+            <button type="submit">Submit Order</button>
         </form>
     </main>
 
@@ -51,27 +53,17 @@
     </footer>
 
     <script>
-        function handleSubmit(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            // Retrieve form values
-            const form = event.target;
-            const name = form.name.value;
-            const address = form.address.value;
-            const phone = form.phone.value;
-            const email = form.email.value;
-            const crust = form.crust.value;
-            const toppings = form.toppings.value;
-            const quantity = form.quantity.value;
-
-            // Store form data in localStorage
-            localStorage.setItem("orderData", JSON.stringify({
-                name, address, phone, email, crust, toppings, quantity
-            }));
-
-            // Redirect to the Thank You page
-            window.location.href = "thank_you.html";
-        }
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Collecting form data
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            localStorage.setItem('orderData', JSON.stringify(data));
+            window.location.href = 'thank_you.html'; // Redirect to thank you page
+        });
     </script>
 </body>
 </html>
