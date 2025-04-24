@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Pizza</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1><img src="blackgoose.png" alt="Black Goose Bistro Logo" /></h1>
+  </header>
+
+  <main>
+    <h2>Place Your Order</h2>
+    <form id="orderForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required />
+
+      <label for="telephone">Telephone:</label>
+      <input type="text" id="telephone" name="telephone" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="delivery">Delivery Instructions:</label>
+      <textarea id="delivery" name="delivery"></textarea>
+
+      <label for="crust">Crust:</label>
+      <select id="crust" name="crust">
+        <option value="white">White</option>
+        <option value="wholewheat">Whole Wheat</option>
+      </select>
+
+      <label for="topping">Topping:</label>
+      <select id="topping" name="topping">
+        <option value="redsauce">Red Sauce</option>
+        <option value="pesto">Pesto</option>
+      </select>
+
+      <label for="number">Quantity:</label>
+      <input type="number" id="number" name="number" min="1" value="1" />
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Black Goose Bistro. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const formData = new FormData(this);
+      const data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+      localStorage.setItem("orderData", JSON.stringify(data));
+      window.location.href = "thank_you.html";
+    });
+  </script>
+</body>
+</html>
