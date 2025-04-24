@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You for Your Order</title>
+  <style>
+    body {
+      background-color: #faf2e4;
+      font-family: sans-serif;
+      margin: 0 10%;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: serif;
+      font-weight: normal;
+      text-transform: uppercase;
+      border-bottom: 1px solid #57b1dc;
+      margin-top: 30px;
+    }
+
+    h2 {
+      color: #d1633c;
+      font-size: 1em;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    p.disclaimer {
+      border-top: 1px solid #d1633c;
+      padding-top: 1em;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #d1633c;
+      color: white;
+      font-weight: bold;
+      font-size: 1em;
+      text-decoration: none;
+      border-radius: 8px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #a8492e;
+    }
+
+    .button-container {
+      text-align: center;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>THANK YOU</h1>
+
+  <p>Thank you for ordering from Black Goose Bistro. We have received the following information about your order:</p>
+
+  <h2>Your Information</h2>
+  <ul id="orderInfo"></ul>
+
+  <h2>Your Pizza</h2>
+  <ul id="pizzaDetails"></ul>
+
+  <p class="disclaimer"><small>This site is for educational purposes only. No pizzas will show up at your door.</small></p>
+
+  <div class="button-container">
+    <a href="/fid/bistro/index.html" class="button">← Go Back to Home Page</a>
+    <a href="/fid/bistro/order.html" class="button">🍕 Place Another Order</a>
+  </div>
+
+  <canvas id="confetti"></canvas>
+
+  <audio id="celebrationSound" src="https://cdn.pixabay.com/audio/2023/03/13/audio_7d6bb45d4c.mp3"></audio>
+
+  <script>
+    // Inject order data
+    const orderData = JSON.parse(localStorage.getItem("orderData"));
+    document.getElementById("orderInfo").innerHTML = `
+      <li><strong>Name:</strong> ${orderData.name}</li>
+      <li><strong>Address:</strong> ${orderData.address}</li>
+      <li><strong>Phone Number:</strong> ${orderData.phone}</li>
+      <li><strong>Email Address:</strong> ${orderData.email}</li>
+    `;
+    document.getElementById("pizzaDetails").innerHTML = `
+      <li><strong>Crust:</strong> ${orderData.crust}</li>
+      <li><strong>Toppings:</strong> ${orderData.toppings}</li>
+      <li><strong>Quantity:</strong> ${orderData.quantity}</li>
+    `;
+
+    // Confetti animation
+    const canvas = document.getElementById("confetti");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    function createParticle() {
+      return {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        dx: Math.random() * 2 - 1,
+        dy: Math.random() * -3 - 1,
+        radius: Math.random() * 5 + 2,
+        color: `hsl(${Math.random() * 360}, 100%, 60%)`,
+      };
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let p of particles) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+        p.x += p.dx;
+        p.y += p.dy;
+        p.dy += 0.05;
+      }
+      particles = particles.filter(p => p.y < canvas.height);
+      requestAnimationFrame(drawParticles);
+    }
+
+    function launchConfetti() {
+      for (let i = 0; i < 150; i++) {
+        particles.push(createParticle());
+      }
+      drawParticles();
+    }
+
+    // Sound + confetti trigger
+    window.onload = () => {
+      launchConfetti();
+      document.getElementById("celebrationSound").play();
+    };
+  </script>
+</body>
+</html>
